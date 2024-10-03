@@ -1,3 +1,5 @@
+// This script organizes files by decoding and categorizing them based on specific values.
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -22,13 +24,13 @@ const valueDamage = "damage";
 function decodeFile(filePath) {
     const decodedFilePath = `${filePath}.decoded`;
     try {
-        // Base64 decoding
+        // Base64 decoding (if needed)
         execSync(`base64 --decode "${filePath}" > "${decodedFilePath}"`);
         fs.renameSync(decodedFilePath, filePath);
         return;
-    } catch {}
-
-    // Additional decoding methods can be added here...
+    } catch (error) {
+        console.error(`Error decoding file ${filePath}:`, error);
+    }
 
     console.log(`No decoding applied for ${filePath}`);
 }
@@ -57,27 +59,4 @@ fs.readdirSync(splitDir).forEach(file => {
     }
 });
 
-// Generate classes.txt for each folder
-fs.readdirSync(outputDir).forEach(folder => {
-    const folderPath = path.join(outputDir, folder);
-    if (fs.lstatSync(folderPath).isDirectory()) {
-        const classesFile = path.join(folderPath, 'classes.txt');
-        fs.writeFileSync(classesFile, '');
-
-        fs.readdirSync(folderPath).forEach(file => {
-            if (file.endsWith('.txt')) {
-                const content = fs.readFileSync(path.join(folderPath, file), 'utf8');
-                const classNames = content.match(/class \w+/g) || [];
-                classNames.forEach(className => {
-                    fs.appendFileSync(classesFile, className.replace('class ', '') + '\n');
-                });
-            }
-        });
-
-        // Remove duplicates and sort
-        const uniqueClasses = [...new Set(fs.readFileSync(classesFile, 'utf8').split('\n'))].filter(Boolean);
-        fs.writeFileSync(classesFile, uniqueClasses.sort().join('\n'));
-    }
-});
-
-console.log("Files have been split, organized, and class names collected successfully!");
+console.log("Files have been split and organized successfully!");
