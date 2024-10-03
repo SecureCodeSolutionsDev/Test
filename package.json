@@ -6,7 +6,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    // Add any dependencies here if needed
-  }
+  "dependencies": {}
 }
