@@ -1,21 +1,26 @@
-name: Run JavaScript Script
+// This script organizes files by decoding and categorizing them based on specific values.
 
-on: [push]
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.x'
-      
-      - name: Install dependencies (if any)
-        run: npm install
+const inputFile = '/storage/emulated/0/MT2/apks/dump.txt';
+const splitDir = '/data/data/com.termux/files/home';
+const outputDir = path.join(splitDir, 'organized');
 
-      - name: Run script
-        run: node script.js
+// Create output directory if it doesn't exist
+if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+}
+
+// Split the file into chunks of 5MB
+execSync(`split -b 5m --additional-suffix=.txt "${inputFile}" "${splitDir}/dump_part_"`);
+
+// Define target values
+const valueSpeed = "speed";
+const valueDamage = "damage";
+
+// Function to decode file content for various encodings
+function decodeFile(filePath) {
+    const decodedFilePath = `${filePath}.decoded`;
+    try {
