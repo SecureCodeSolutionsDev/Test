@@ -1,0 +1,12 @@
+{
+  "name": "file-organizer",
+  "version": "1.0.0",
+  "description": "A script to organize files",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    // Add any dependencies here if needed
+  }
+}
