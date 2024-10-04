@@ -28,7 +28,7 @@ jobs:
           cache: 'npm'  # Caches npm dependencies for faster builds
 
       - name: Install dependencies
-        run: npm install  # This will install all dependencies listed in package.json
+        run: npm install --no-package-lock  # This will install all dependencies without using package-lock.json
 
       - name: Build and test
         run: |
