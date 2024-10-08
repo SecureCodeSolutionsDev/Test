@@ -1,0 +1,934 @@
+public class CharacterUnlockUI : MonoBehaviour // TypeDefIndex: 6779
+{
+	// Fields
+	[SerializeField] // RVA: 0x613DC8 Offset: 0x613DC8 VA: 0x613DC8
+	private Canvas mainCanvas; // 0x18
+	[SerializeField] // RVA: 0x613DD8 Offset: 0x613DD8 VA: 0x613DD8
+	private Button buyButton; // 0x20
+	[SerializeField] // RVA: 0x613DE8 Offset: 0x613DE8 VA: 0x613DE8
+	private Text goldCost; // 0x28
+	private int costNum; // 0x30
+
+	// Methods
+
+	// RVA: 0x111E3C0 Offset: 0x111E3C0 VA: 0x111E3C0
+	private void Awake() { }
+
+public class WeaponItem : MonoBehaviour // TypeDefIndex: 6786
+{
+	// Fields
+	[SerializeField] // RVA: 0x613F04 Offset: 0x613F04 VA: 0x613F04
+	private Text slantText; // 0x18
+	[SerializeField] // RVA: 0x613F14 Offset: 0x613F14 VA: 0x613F14
+	private Text topText; // 0x20
+	[SerializeField] // RVA: 0x613F24 Offset: 0x613F24 VA: 0x613F24
+	private Text topWeaponGetText; // 0x28
+	[SerializeField] // RVA: 0x613F34 Offset: 0x613F34 VA: 0x613F34
+	private Text countText; // 0x30
+	[SerializeField] // RVA: 0x613F44 Offset: 0x613F44 VA: 0x613F44
+	private Image icon; // 0x38
+	[SerializeField] // RVA: 0x613F54 Offset: 0x613F54 VA: 0x613F54
+	private Image slantSprite; // 0x40
+	[SerializeField] // RVA: 0x613F64 Offset: 0x613F64 VA: 0x613F64
+	private GameObject goldIcon; // 0x48
+	[SerializeField] // RVA: 0x613F74 Offset: 0x613F74 VA: 0x613F74
+	private GameObject bg; // 0x50
+	[SerializeField] // RVA: 0x613F84 Offset: 0x613F84 VA: 0x613F84
+	private GameObject downBase; // 0x58
+
+	// Methods
+
+	// RVA: 0xC81290 Offset: 0xC81290 VA: 0xC81290
+	public void SetIcon(Sprite sprite, string name, PurchaseType type, bool isWeapon = False, int count = 0) { }
+
+public class LargeGoldItem : MonoBehaviour // TypeDefIndex: 6788
+{
+	// Fields
+	[SerializeField] // RVA: 0x613F94 Offset: 0x613F94 VA: 0x613F94
+	private IAPButton iapButton; // 0x18
+	[SerializeField] // RVA: 0x613FA4 Offset: 0x613FA4 VA: 0x613FA4
+	private Button iapBtn; // 0x20
+	[SerializeField] // RVA: 0x613FB4 Offset: 0x613FB4 VA: 0x613FB4
+	private GameObject lockGo; // 0x28
+	[SerializeField] // RVA: 0x613FC4 Offset: 0x613FC4 VA: 0x613FC4
+	private PurchaseType type; // 0x30
+	[SerializeField] // RVA: 0x613FD4 Offset: 0x613FD4 VA: 0x613FD4
+	private Text goldCount; // 0x38
+
+	// Methods
+
+	// RVA: 0x936418 Offset: 0x936418 VA: 0x936418
+	private void Start() { }
+
+internal class GiftPackageData // TypeDefIndex: 7896
+{
+	// Fields
+	private static List<PurchaseType> types; // 0x0
+	public static Dictionary<PurchaseType, SingleGiftPackageData> giftPackageData; // 0x8
+	public static int ammoClipPopupCount; // 0x10
+	public static int goldPopupCount; // 0x14
+	public static int awardADPopupCount; // 0x18
+
+	// Methods
+
+	// RVA: 0xBCE604 Offset: 0xBCE604 VA: 0xBCE604
+	public static void InitData() { }
+
+public class SingleGiftPackageData // TypeDefIndex: 7897
+{
+	// Fields
+	public List<FPSShooterWeaponType> weaponList; // 0x10
+	public Dictionary<FPSPropType, int> propData; // 0x18
+	public int goldCount; // 0x20
+	public bool removeAD; // 0x24
+	public List<int> popUpLevel; // 0x28
+
+	// Methods
+
+	// RVA: 0xEA9BCC Offset: 0xEA9BCC VA: 0xEA9BCC
+	public void .ctor() { }
+
+public class PreCreatedUIAssets // TypeDefIndex: 7956
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62647C Offset: 0x62647C VA: 0x62647C
+	public PreCreatedObject globalTipsPrefab; // 0x10
+	public PreCreatedObject globalHandPrefab; // 0x18
+	public PreCreatedObject globalInterAdPrefab; // 0x20
+	public PreCreatedObject globalAdRewardPrefab; // 0x28
+	public PreCreatedObject killBattleResPrefab; // 0x30
+	public PreCreatedObject killStateUIPrefab; // 0x38
+	public PreCreatedObject killInputUIPrefab; // 0x40
+	public PreCreatedObject pvpBattleResPrefab; // 0x48
+	public PreCreatedObject matchUI; // 0x50
+	public PreCreatedObject battleBuffUIPrefab; // 0x58
+	public PreCreatedObject skyscraperResPrefab; // 0x60
+	public PreCreatedObject cameraFollowUIPrefab; // 0x68
+	[HeaderAttribute] // RVA: 0x6264B4 Offset: 0x6264B4 VA: 0x6264B4
+	public PreCreatedObject confirmUIPrefab; // 0x70
+	public PreCreatedObject globalUnlockAniPrefab; // 0x78
+	public PreCreatedObject pvpSelectPrefab; // 0x80
+	public PreCreatedObject signInRewardUI; // 0x88
+	public PreCreatedObject appEvaluationUI; // 0x90
+	public PreCreatedObject battleSettingUI; // 0x98
+	public PreCreatedObject playerInfoUI; // 0xA0
+	public PreCreatedObject weaponRewardUI; // 0xA8
+	public PreCreatedObject starRewardUI; // 0xB0
+	public PreCreatedObject giftPackageUI; // 0xB8
+	public PreCreatedObject getPropUI; // 0xC0
+	public PreCreatedObject ItemGetUI; // 0xC8
+	public PreCreatedObject taskUI; // 0xD0
+	public PreCreatedObject towerAewardUI; // 0xD8
+	public PreCreatedObject militaryRankRewardUI; // 0xE0
+	public PreCreatedObject militaryRankProgressUI; // 0xE8
+	public PreCreatedObject playerCharacterUI; // 0xF0
+	public PreCreatedObject characterWeaponUI; // 0xF8
+	public PreCreatedObject characterUnlockUI; // 0x100
+	public PreCreatedObject adConfirmUI; // 0x108
+	public PreCreatedObject storeUI; // 0x110
+	public PreCreatedObject weaponUpgradeProgressUI; // 0x118
+	public PreCreatedObject pvpBattleInfoUI; // 0x120
+	[HeaderAttribute] // RVA: 0x6264EC Offset: 0x6264EC VA: 0x6264EC
+	public PreCreatedObject killItem; // 0x128
+	public PreCreatedObject goldItem; // 0x130
+	public PreCreatedObject starItem; // 0x138
+	public PreCreatedObject damageUI; // 0x140
+	public PreCreatedObject expUI; // 0x148
+	public PreCreatedObject costMoneyUI; // 0x150
+	[HeaderAttribute] // RVA: 0x626524 Offset: 0x626524 VA: 0x626524
+	public PreCreatedObject iconFlyAni; // 0x158
+	public PreCreatedObject starFlyAni; // 0x160
+	[HeaderAttribute] // RVA: 0x62655C Offset: 0x62655C VA: 0x62655C
+	public Sprite goldIcon; // 0x168
+	public Sprite sinlgeGoldIcon; // 0x170
+	public List<LevelFuncData> levelFuncDatas; // 0x178
+	public List<WeaponSpecialIconData> weaponSpecialIconDatas; // 0x180
+	public List<ProtertyIconData> protertyIconDatas; // 0x188
+
+	// Methods
+
+	// RVA: 0x8885D4 Offset: 0x8885D4 VA: 0x8885D4
+	public void .ctor() { }
+
+public class BattleResUI : MonoBehaviour // TypeDefIndex: 8236
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62D180 Offset: 0x62D180 VA: 0x62D180
+	public Animation rootAni; // 0x18
+	public Button nextBtn; // 0x20
+	public Button upgradeBtnLeft; // 0x28
+	public Button nextBtnRight; // 0x30
+	[HeaderAttribute] // RVA: 0x62D1B8 Offset: 0x62D1B8 VA: 0x62D1B8
+	public Animation rewardAni; // 0x38
+	public BattleResItem killItem; // 0x40
+	public BattleResItem headshotItem; // 0x48
+	public CanvasGroup rewardCanvas; // 0x50
+	[HeaderAttribute] // RVA: 0x62D1F0 Offset: 0x62D1F0 VA: 0x62D1F0
+	public BattleResReward scoreReward; // 0x58
+	[HeaderAttribute] // RVA: 0x62D228 Offset: 0x62D228 VA: 0x62D228
+	public GameObject crownTopRoot; // 0x60
+	public GameObject crownRoot; // 0x68
+	[HeaderAttribute] // RVA: 0x62D260 Offset: 0x62D260 VA: 0x62D260
+	public Image startLeft; // 0x70
+	public Image startCenter; // 0x78
+	public Image startRight; // 0x80
+	[HeaderAttribute] // RVA: 0x62D298 Offset: 0x62D298 VA: 0x62D298
+	public Animation weaponAni; // 0x88
+	public Image weaponIcon; // 0x90
+	public SliderChangeAni weaponSlider; // 0x98
+	public Text weaponPrgsTotalTxt; // 0xA0
+	public TextChangeAni weaponPrgsTxt; // 0xA8
+	public CanvasGroup weaponCanvas; // 0xB0
+	[HeaderAttribute] // RVA: 0x62D2D0 Offset: 0x62D2D0 VA: 0x62D2D0
+	public GoldRootUI goldRootUI; // 0xB8
+	private bool isActive; // 0xC0
+	private Coroutine resCor; // 0xC8
+	private int starCount; // 0xD0
+	private WaitForSeconds itemWait; // 0xD8
+	private WaitForSeconds prgsWait; // 0xE0
+	private WaitForSeconds weaponWait; // 0xE8
+	private UnityAction<GameOverState> onBtnResEnd; // 0xF0
+	private int crownReward; // 0xF8
+	private int headshotReward; // 0xFC
+	private int killReward; // 0x100
+	private int star1Reward; // 0x104
+	private int star2Reward; // 0x108
+	private int star3Reward; // 0x10C
+	private int resultGold; // 0x110
+	private bool isWin; // 0x114
+	private bool prevGetCrown; // 0x115
+	private bool prevGetStar1; // 0x116
+	private bool prevGetStar2; // 0x117
+	private bool prevGetStar3; // 0x118
+	private bool currGetCrown; // 0x119
+	private bool currGetStar1; // 0x11A
+	private bool currGetStar2; // 0x11B
+	private bool currGetStar3; // 0x11C
+	private bool firstGetCrown; // 0x11D
+	private bool firstGetStar1; // 0x11E
+	private bool firstGetStar2; // 0x11F
+	private bool firstGetStar3; // 0x120
+	private int killTarget; // 0x124
+	private int killCount; // 0x128
+	private int killHeadshot; // 0x12C
+	private bool isShowWeaponAni; // 0x130
+	private bool isUnlockWeapon; // 0x131
+	private FPSShooterWeaponType unlockWeaponType; // 0x134
+	private int weaponPrgsTargetCount; // 0x138
+	private float weaponPrgsTargetMax; // 0x13C
+
+	// Methods
+
+	// RVA: 0x92D6E8 Offset: 0x92D6E8 VA: 0x92D6E8
+	private void Awake() { }
+
+public class SkyscraperResUI : MonoBehaviour // TypeDefIndex: 8258
+{
+	// Fields
+	public Button backBtn; // 0x18
+	public Button relplayBtn; // 0x20
+	public Button nextBtn; // 0x28
+	public Button upgradeBtn; // 0x30
+	public Text titleTxt; // 0x38
+	public Text floorTxt; // 0x40
+	public Transform rewardContainer; // 0x48
+	public List<AwardIcon> icons; // 0x50
+	public GoldRootUI goldRootUI; // 0x58
+	private GameOverState overState; // 0x60
+	private UnityAction<GameOverState> closeCallback; // 0x68
+
+	// Methods
+
+	// RVA: 0xEA9CA8 Offset: 0xEA9CA8 VA: 0xEA9CA8
+	public void ResetData(GameOverState state, UnityAction<GameOverState> callback) { }
+
+public class GoldRootUI : MonoBehaviour // TypeDefIndex: 8262
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62DBD4 Offset: 0x62DBD4 VA: 0x62DBD4
+	public Text goldCountTxt; // 0x18
+	public Button goldAddBtn; // 0x20
+	public Transform goldTransform; // 0x28
+	public TextChangeAni textAnimation; // 0x30
+
+	// Methods
+
+	// RVA: 0xA53F84 Offset: 0xA53F84 VA: 0xA53F84
+	private void Awake() { }
+
+public class ItemGetUI : MonoBehaviour // TypeDefIndex: 8264
+{
+	// Fields
+	[SerializeField] // RVA: 0x62DC0C Offset: 0x62DC0C VA: 0x62DC0C
+	[HeaderAttribute] // RVA: 0x62DC0C Offset: 0x62DC0C VA: 0x62DC0C
+	private GameObject propPrefab; // 0x18
+	[SerializeField] // RVA: 0x62DC58 Offset: 0x62DC58 VA: 0x62DC58
+	private GameObject weaponPrefab; // 0x20
+	[SerializeField] // RVA: 0x62DC68 Offset: 0x62DC68 VA: 0x62DC68
+	private GameObject weaponRoot; // 0x28
+	[SerializeField] // RVA: 0x62DC78 Offset: 0x62DC78 VA: 0x62DC78
+	private GameObject propRoot; // 0x30
+	[HeaderAttribute] // RVA: 0x62DC88 Offset: 0x62DC88 VA: 0x62DC88
+	[SerializeField] // RVA: 0x62DC88 Offset: 0x62DC88 VA: 0x62DC88
+	private Text buttonText; // 0x38
+	[SerializeField] // RVA: 0x62DCD4 Offset: 0x62DCD4 VA: 0x62DCD4
+	private Text desTexT; // 0x40
+	[SerializeField] // RVA: 0x62DCE4 Offset: 0x62DCE4 VA: 0x62DCE4
+	private Text title; // 0x48
+	[SerializeField] // RVA: 0x62DCF4 Offset: 0x62DCF4 VA: 0x62DCF4
+	private Text pieceText; // 0x50
+	[SerializeField] // RVA: 0x62DD04 Offset: 0x62DD04 VA: 0x62DD04
+	[HeaderAttribute] // RVA: 0x62DD04 Offset: 0x62DD04 VA: 0x62DD04
+	private Button closeButton; // 0x58
+	[HeaderAttribute] // RVA: 0x62DD50 Offset: 0x62DD50 VA: 0x62DD50
+	[SerializeField] // RVA: 0x62DD50 Offset: 0x62DD50 VA: 0x62DD50
+	private Sprite goldSprite; // 0x60
+	[SerializeField] // RVA: 0x62DD9C Offset: 0x62DD9C VA: 0x62DD9C
+	[HeaderAttribute] // RVA: 0x62DD9C Offset: 0x62DD9C VA: 0x62DD9C
+	private Slider pieceSlider; // 0x68
+	public UnityAction onClose; // 0x70
+	private WaitForSeconds waitDelay; // 0x78
+	private Coroutine waitCor; // 0x80
+	private Dictionary<GoodsConfigDefine, int> showDatas; // 0x88
+	private bool showWeapon; // 0x90
+	private bool showedWeapon; // 0x91
+	private int weaponCount; // 0x94
+	private GoodsConfigDefine weaponConfig; // 0x98
+	private GameObject weaponShowItem; // 0xA0
+	private List<GameObject> propGameobjects; // 0xA8
+
+	// Methods
+
+	// RVA: 0x933B48 Offset: 0x933B48 VA: 0x933B48
+	private void Awake() { }
+
+internal class StarRewardItem : FancyScrollRectCell<StarRewardItemData, StarRewardContext> // TypeDefIndex: 8273
+{
+	// Fields
+	[SerializeField] // RVA: 0x62DE90 Offset: 0x62DE90 VA: 0x62DE90
+	[HeaderAttribute] // RVA: 0x62DE90 Offset: 0x62DE90 VA: 0x62DE90
+	private Text starCount; // 0x28
+	[SerializeField] // RVA: 0x62DEDC Offset: 0x62DEDC VA: 0x62DEDC
+	private Text freeRewradCount; // 0x30
+	[SerializeField] // RVA: 0x62DEEC Offset: 0x62DEEC VA: 0x62DEEC
+	private Text currentLevel; // 0x38
+	[SerializeField] // RVA: 0x62DEFC Offset: 0x62DEFC VA: 0x62DEFC
+	private Text adRewardCount; // 0x40
+	[HeaderAttribute] // RVA: 0x62DF0C Offset: 0x62DF0C VA: 0x62DF0C
+	[SerializeField] // RVA: 0x62DF0C Offset: 0x62DF0C VA: 0x62DF0C
+	private GameObject line1Select; // 0x48
+	[SerializeField] // RVA: 0x62DF58 Offset: 0x62DF58 VA: 0x62DF58
+	private GameObject line2Select; // 0x50
+	[SerializeField] // RVA: 0x62DF68 Offset: 0x62DF68 VA: 0x62DF68
+	private GameObject starTrans; // 0x58
+	[SerializeField] // RVA: 0x62DF78 Offset: 0x62DF78 VA: 0x62DF78
+	private GameObject topReceivedMask; // 0x60
+	[SerializeField] // RVA: 0x62DF88 Offset: 0x62DF88 VA: 0x62DF88
+	private GameObject downReceivedMask; // 0x68
+	[SerializeField] // RVA: 0x62DF98 Offset: 0x62DF98 VA: 0x62DF98
+	private GameObject adReceiveGlow; // 0x70
+	[SerializeField] // RVA: 0x62DFA8 Offset: 0x62DFA8 VA: 0x62DFA8
+	private GameObject freeReceiveGlow; // 0x78
+	[HeaderAttribute] // RVA: 0x62DFB8 Offset: 0x62DFB8 VA: 0x62DFB8
+	[SerializeField] // RVA: 0x62DFB8 Offset: 0x62DFB8 VA: 0x62DFB8
+	private Color topUnlockColor; // 0x80
+	[SerializeField] // RVA: 0x62E004 Offset: 0x62E004 VA: 0x62E004
+	private Color centerUnlockColor; // 0x90
+	[SerializeField] // RVA: 0x62E014 Offset: 0x62E014 VA: 0x62E014
+	private Color downUnlockColor; // 0xA0
+	[SerializeField] // RVA: 0x62E024 Offset: 0x62E024 VA: 0x62E024
+	private Color topLockedColor; // 0xB0
+	[SerializeField] // RVA: 0x62E034 Offset: 0x62E034 VA: 0x62E034
+	private Color centerLockedColor; // 0xC0
+	[SerializeField] // RVA: 0x62E044 Offset: 0x62E044 VA: 0x62E044
+	private Color downLockedColor; // 0xD0
+	[HeaderAttribute] // RVA: 0x62E054 Offset: 0x62E054 VA: 0x62E054
+	[SerializeField] // RVA: 0x62E054 Offset: 0x62E054 VA: 0x62E054
+	private Image topBG; // 0xE0
+	[SerializeField] // RVA: 0x62E0A0 Offset: 0x62E0A0 VA: 0x62E0A0
+	private Image downBG; // 0xE8
+	[SerializeField] // RVA: 0x62E0B0 Offset: 0x62E0B0 VA: 0x62E0B0
+	private Image centerBG; // 0xF0
+	[SerializeField] // RVA: 0x62E0C0 Offset: 0x62E0C0 VA: 0x62E0C0
+	private Image centerIcon; // 0xF8
+	[SerializeField] // RVA: 0x62E0D0 Offset: 0x62E0D0 VA: 0x62E0D0
+	private Image topReceivedIcon; // 0x100
+	[SerializeField] // RVA: 0x62E0E0 Offset: 0x62E0E0 VA: 0x62E0E0
+	private Image downReceivedIcon; // 0x108
+	[SerializeField] // RVA: 0x62E0F0 Offset: 0x62E0F0 VA: 0x62E0F0
+	private Image topFrame; // 0x110
+	[SerializeField] // RVA: 0x62E100 Offset: 0x62E100 VA: 0x62E100
+	private Image downFrame; // 0x118
+	[SerializeField] // RVA: 0x62E110 Offset: 0x62E110 VA: 0x62E110
+	private Image topIcon; // 0x120
+	[SerializeField] // RVA: 0x62E120 Offset: 0x62E120 VA: 0x62E120
+	private Image downIcon; // 0x128
+	[SerializeField] // RVA: 0x62E130 Offset: 0x62E130 VA: 0x62E130
+	[HeaderAttribute] // RVA: 0x62E130 Offset: 0x62E130 VA: 0x62E130
+	private Button receiveButton; // 0x130
+	[SerializeField] // RVA: 0x62E17C Offset: 0x62E17C VA: 0x62E17C
+	private Button adButton; // 0x138
+	[SerializeField] // RVA: 0x62E18C Offset: 0x62E18C VA: 0x62E18C
+	[HeaderAttribute] // RVA: 0x62E18C Offset: 0x62E18C VA: 0x62E18C
+	private Sprite gold; // 0x140
+	[SerializeField] // RVA: 0x62E1D8 Offset: 0x62E1D8 VA: 0x62E1D8
+	private Sprite adBoxReward; // 0x148
+	[SerializeField] // RVA: 0x62E1E8 Offset: 0x62E1E8 VA: 0x62E1E8
+	private Sprite freeBoxReward; // 0x150
+	[HeaderAttribute] // RVA: 0x62E1F8 Offset: 0x62E1F8 VA: 0x62E1F8
+	[SerializeField] // RVA: 0x62E1F8 Offset: 0x62E1F8 VA: 0x62E1F8
+	private Sprite blueFrame; // 0x158
+	[SerializeField] // RVA: 0x62E244 Offset: 0x62E244 VA: 0x62E244
+	private Sprite yellowFrame; // 0x160
+	[SerializeField] // RVA: 0x62E254 Offset: 0x62E254 VA: 0x62E254
+	private Sprite receiveSprite; // 0x168
+	[SerializeField] // RVA: 0x62E264 Offset: 0x62E264 VA: 0x62E264
+	private Sprite adSprite; // 0x170
+	[SerializeField] // RVA: 0x62E274 Offset: 0x62E274 VA: 0x62E274
+	private Sprite confirmSprite; // 0x178
+	private StarRewardItemData currData; // 0x180
+	private bool isMultipleReward; // 0x188
+	private bool isFreeItemMultipleReward; // 0x189
+	private GoodsConfigDefine adData; // 0x190
+	private GoodsConfigDefine freeData; // 0x198
+
+	// Methods
+
+	// RVA: 0xEAB438 Offset: 0xEAB438 VA: 0xEAB438 Slot: 6
+	public override void Initialize() { }
+
+public class StarRewardUI : MonoBehaviour // TypeDefIndex: 8276
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62E2B4 Offset: 0x62E2B4 VA: 0x62E2B4
+	public Button closeBtn; // 0x18
+	[HeaderAttribute] // RVA: 0x62E2EC Offset: 0x62E2EC VA: 0x62E2EC
+	public Text title; // 0x20
+	public Text starCount; // 0x28
+	[SerializeField] // RVA: 0x62E324 Offset: 0x62E324 VA: 0x62E324
+	private StarRewardScrollView starRewardScrollView; // 0x30
+	[HeaderAttribute] // RVA: 0x62E334 Offset: 0x62E334 VA: 0x62E334
+	[SerializeField] // RVA: 0x62E334 Offset: 0x62E334 VA: 0x62E334
+	private Image weaponIcon; // 0x38
+	[SerializeField] // RVA: 0x62E380 Offset: 0x62E380 VA: 0x62E380
+	private Image freeIcon; // 0x40
+	[SerializeField] // RVA: 0x62E390 Offset: 0x62E390 VA: 0x62E390
+	private Text freeItemCount; // 0x48
+	[SerializeField] // RVA: 0x62E3A0 Offset: 0x62E3A0 VA: 0x62E3A0
+	private Text levelCount; // 0x50
+	[SerializeField] // RVA: 0x62E3B0 Offset: 0x62E3B0 VA: 0x62E3B0
+	private Sprite goldIcon; // 0x58
+	[SerializeField] // RVA: 0x62E3C0 Offset: 0x62E3C0 VA: 0x62E3C0
+	private GoldRootUI goldRootUI; // 0x60
+	private int jumpIndex; // 0x68
+	private bool isPlayAni; // 0x6C
+	private List<StarRewardItemData> currentData; // 0x70
+	private List<StarRewardItemData> bigAwardData; // 0x78
+	public UnityAction onClose; // 0x80
+	private string currentLeftTime; // 0x88
+
+	// Methods
+
+	// RVA: 0xEAE0B0 Offset: 0xEAE0B0 VA: 0xEAE0B0
+	private void Awake() { }
+
+public class CharacterUI : MonoBehaviour // TypeDefIndex: 8297
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62E89C Offset: 0x62E89C VA: 0x62E89C
+	[SerializeField] // RVA: 0x62E89C Offset: 0x62E89C VA: 0x62E89C
+	private Button closeBtn; // 0x18
+	[SerializeField] // RVA: 0x62E8E8 Offset: 0x62E8E8 VA: 0x62E8E8
+	private Button weaponBtn; // 0x20
+	[SerializeField] // RVA: 0x62E8F8 Offset: 0x62E8F8 VA: 0x62E8F8
+	private Button characterBtn; // 0x28
+	[SerializeField] // RVA: 0x62E908 Offset: 0x62E908 VA: 0x62E908
+	private Button talentBtn; // 0x30
+	[HeaderAttribute] // RVA: 0x62E918 Offset: 0x62E918 VA: 0x62E918
+	[SerializeField] // RVA: 0x62E918 Offset: 0x62E918 VA: 0x62E918
+	private GameObject weaponRoot; // 0x38
+	[SerializeField] // RVA: 0x62E964 Offset: 0x62E964 VA: 0x62E964
+	private GameObject characterRoot; // 0x40
+	[SerializeField] // RVA: 0x62E974 Offset: 0x62E974 VA: 0x62E974
+	private GameObject talentRoot; // 0x48
+	[SerializeField] // RVA: 0x62E984 Offset: 0x62E984 VA: 0x62E984
+	private GameObject iconBullet; // 0x50
+	[SerializeField] // RVA: 0x62E994 Offset: 0x62E994 VA: 0x62E994
+	private GameObject iconDamage; // 0x58
+	[SerializeField] // RVA: 0x62E9A4 Offset: 0x62E9A4 VA: 0x62E9A4
+	[HeaderAttribute] // RVA: 0x62E9A4 Offset: 0x62E9A4 VA: 0x62E9A4
+	private Text goldCount; // 0x60
+	[SerializeField] // RVA: 0x62E9F0 Offset: 0x62E9F0 VA: 0x62E9F0
+	private Text talentText; // 0x68
+	[SerializeField] // RVA: 0x62EA00 Offset: 0x62EA00 VA: 0x62EA00
+	private Text talentDes; // 0x70
+	[SerializeField] // RVA: 0x62EA10 Offset: 0x62EA10 VA: 0x62EA10
+	private Canvas mainCanvas; // 0x78
+	[SerializeField] // RVA: 0x62EA20 Offset: 0x62EA20 VA: 0x62EA20
+	private GoldRootUI goldRootUI; // 0x80
+	[SerializeField] // RVA: 0x62EA30 Offset: 0x62EA30 VA: 0x62EA30
+	private List<CharacterTabItem> tabItems; // 0x88
+	[SerializeField] // RVA: 0x62EA40 Offset: 0x62EA40 VA: 0x62EA40
+	private OwnedWeaponScrollView ownedWeaponScrollView; // 0x90
+	[SerializeField] // RVA: 0x62EA50 Offset: 0x62EA50 VA: 0x62EA50
+	private CharacterScrollView characterScrollView; // 0x98
+	[HeaderAttribute] // RVA: 0x62EA60 Offset: 0x62EA60 VA: 0x62EA60
+	[SerializeField] // RVA: 0x62EA60 Offset: 0x62EA60 VA: 0x62EA60
+	private List<PlayerAttributeItemUI> attributes; // 0xA0
+	private string greenColor; // 0xA8
+	private List<WeaponScrollItemData> ownedWeaponItemDatas; // 0xB0
+	private List<CharacterItemData> characterDatas; // 0xB8
+	private int currentSelectIndex; // 0xC0
+	private UnityAction onClose; // 0xC8
+
+	// Methods
+
+	// RVA: 0x111BC98 Offset: 0x111BC98 VA: 0x111BC98
+	private void OnEnable() { }
+
+public class MatchResItemUI : MonoBehaviour // TypeDefIndex: 8324
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62EFC0 Offset: 0x62EFC0 VA: 0x62EFC0
+	public Image playerImg; // 0x18
+	public Image iconImg; // 0x20
+	public Image countryImg; // 0x28
+	public Image rankImg; // 0x30
+	public Image orderImg; // 0x38
+	public Text orderText; // 0x40
+	public Text nameTxt; // 0x48
+	public Text killTxt; // 0x50
+	public Text deadTxt; // 0x58
+	[HeaderAttribute] // RVA: 0x62EFF8 Offset: 0x62EFF8 VA: 0x62EFF8
+	public TextChangeAni goldTxt; // 0x60
+	[HeaderAttribute] // RVA: 0x62F030 Offset: 0x62F030 VA: 0x62F030
+	public Color playerColor; // 0x68
+	public Color normalColor; // 0x78
+	public Color contentColor; // 0x88
+	public Color otherOrderColor; // 0x98
+	[HeaderAttribute] // RVA: 0x62F068 Offset: 0x62F068 VA: 0x62F068
+	public Sprite firstIcon; // 0xA8
+	public Sprite secondIcon; // 0xB0
+	public Sprite thridIcon; // 0xB8
+
+	// Methods
+
+	// RVA: 0x948910 Offset: 0x948910 VA: 0x948910
+	public void InitItem(bool isPlayer, BotsDefine bot, MatchKDData data, bool isWin) { }
+
+public class MatchResUI : MonoBehaviour // TypeDefIndex: 8327
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62F0A0 Offset: 0x62F0A0 VA: 0x62F0A0
+	public Animation rootAni; // 0x18
+	public GameObject step1Obj; // 0x20
+	public GameObject step2Obj; // 0x28
+	[HeaderAttribute] // RVA: 0x62F0D8 Offset: 0x62F0D8 VA: 0x62F0D8
+	public Text tipResTxt; // 0x30
+	public Text matchResTxt; // 0x38
+	public Text ctCountTxt; // 0x40
+	public Text tCountTxt; // 0x48
+	public Image topImg; // 0x50
+	public Button nextBtn; // 0x58
+	public Button nextBtnRight; // 0x60
+	public Button upgradeBtnLeft; // 0x68
+	public Text ctNameTxt; // 0x70
+	public Text ctKillTxt; // 0x78
+	public Text ctDieTxt; // 0x80
+	public Text ctGoldTxt; // 0x88
+	public Text tNameTxt; // 0x90
+	public Text tKillTxt; // 0x98
+	public Text tDieTxt; // 0xA0
+	public Text tGoldTxt; // 0xA8
+	[HeaderAttribute] // RVA: 0x62F110 Offset: 0x62F110 VA: 0x62F110
+	public List<MatchResItemUI> blueItems; // 0xB0
+	public List<MatchResItemUI> redItems; // 0xB8
+	public GoldRootUI goldRootUI; // 0xC0
+	private bool nextActive; // 0xC8
+	private UnityAction<GameOverState> onMatchResEnd; // 0xD0
+	private GameOverState pvpState; // 0xD8
+	private LogLevelResult matchRes; // 0xDC
+	private List<BotsDefine> blueInfos; // 0xE0
+	private List<BotsDefine> redInfos; // 0xE8
+	private List<MatchKDData> blueKDs; // 0xF0
+	private List<MatchKDData> redKDs; // 0xF8
+	private List<MatchKDData> allKDs; // 0x100
+	private BotsDefine playerInfo; // 0x108
+	private MatchKDData playerKD; // 0x110
+	private int goldCount; // 0x118
+	private Coroutine delayShowKdCor; // 0x120
+	private WaitForSeconds waitShowKd; // 0x128
+
+	// Methods
+
+	// RVA: 0x948EB4 Offset: 0x948EB4 VA: 0x948EB4
+	private void Awake() { }
+
+internal class PvPItem : FancyGridViewCell<PvPItemData, PvPItemContext> // TypeDefIndex: 8362
+{
+	// Fields
+	[SerializeField] // RVA: 0x62FD88 Offset: 0x62FD88 VA: 0x62FD88
+	[HeaderAttribute] // RVA: 0x62FD88 Offset: 0x62FD88 VA: 0x62FD88
+	private Button itemBtn; // 0x28
+	[SerializeField] // RVA: 0x62FDD4 Offset: 0x62FDD4 VA: 0x62FDD4
+	private Image mapIcon; // 0x30
+	[SerializeField] // RVA: 0x62FDE4 Offset: 0x62FDE4 VA: 0x62FDE4
+	private Image selectIcon; // 0x38
+	[SerializeField] // RVA: 0x62FDF4 Offset: 0x62FDF4 VA: 0x62FDF4
+	private Text mapTxt; // 0x40
+	[SerializeField] // RVA: 0x62FE04 Offset: 0x62FE04 VA: 0x62FE04
+	private Text unlockText; // 0x48
+	[SerializeField] // RVA: 0x62FE14 Offset: 0x62FE14 VA: 0x62FE14
+	private Text goldCount; // 0x50
+	[HeaderAttribute] // RVA: 0x62FE24 Offset: 0x62FE24 VA: 0x62FE24
+	[SerializeField] // RVA: 0x62FE24 Offset: 0x62FE24 VA: 0x62FE24
+	private Sprite pvpRandomSprite; // 0x58
+	[SerializeField] // RVA: 0x62FE70 Offset: 0x62FE70 VA: 0x62FE70
+	private Sprite zombieRandomSprite; // 0x60
+	[HeaderAttribute] // RVA: 0x62FE80 Offset: 0x62FE80 VA: 0x62FE80
+	[SerializeField] // RVA: 0x62FE80 Offset: 0x62FE80 VA: 0x62FE80
+	private GameObject lockGo; // 0x68
+	[SerializeField] // RVA: 0x62FECC Offset: 0x62FECC VA: 0x62FECC
+	private GameObject unlockButtonGo; // 0x70
+	[SerializeField] // RVA: 0x62FEDC Offset: 0x62FEDC VA: 0x62FEDC
+	[HeaderAttribute] // RVA: 0x62FEDC Offset: 0x62FEDC VA: 0x62FEDC
+	private Button unlockButton; // 0x78
+	private bool isSelect; // 0x80
+	private bool isLock; // 0x81
+	private PvPItemData curentData; // 0x88
+
+	// Methods
+
+	// RVA: 0x8899D0 Offset: 0x8899D0 VA: 0x8899D0 Slot: 6
+	public override void Initialize() { }
+
+public class RewardAdConfirmUI : MonoBehaviour // TypeDefIndex: 8370
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x62FF58 Offset: 0x62FF58 VA: 0x62FF58
+	public Text title; // 0x18
+	public Button closeBtn; // 0x20
+	public Button backBtn; // 0x28
+	public Button playAdBtn; // 0x30
+	public Image adIcon; // 0x38
+	public Image loadIcon; // 0x40
+	public Animation uiRootAni; // 0x48
+	public Animation loadAni; // 0x50
+	[HeaderAttribute] // RVA: 0x62FF90 Offset: 0x62FF90 VA: 0x62FF90
+	public Text costTxt; // 0x58
+	[HeaderAttribute] // RVA: 0x62FFC8 Offset: 0x62FFC8 VA: 0x62FFC8
+	public GameObject iconRoot; // 0x60
+	public Image icon; // 0x68
+	public Text count; // 0x70
+	public List<FPSPropUIData> uiIcons; // 0x78
+	public Sprite goldIcon; // 0x80
+	public Animation iconAni; // 0x88
+	[HeaderAttribute] // RVA: 0x630000 Offset: 0x630000 VA: 0x630000
+	public GameObject countDownRoot; // 0x90
+	public Animation countDownAni; // 0x98
+	public RectTransform circle; // 0xA0
+	public Image backImg; // 0xA8
+	public Text countdown; // 0xB0
+	[HeaderAttribute] // RVA: 0x630038 Offset: 0x630038 VA: 0x630038
+	public GameObject adBtnRoot; // 0xB8
+	public GameObject costGoldBtnRoot; // 0xC0
+	public UnityAction<bool> onClose; // 0xC8
+	private WaitForSeconds waitDelay; // 0xD0
+	private WaitForSecondsRealtime pauseWaitDelay; // 0xD8
+	private Coroutine countDownAniCor; // 0xE0
+	private ConfirmType confirmType; // 0xE8
+	private LogAdType adType; // 0xEC
+	private bool isPauseGame; // 0xF0
+	private List<Coroutine> aniCor; // 0xF8
+	private int costValue; // 0x100
+	private int getValue; // 0x104
+
+	// Methods
+
+	// RVA: 0xD9D0EC Offset: 0xD9D0EC VA: 0xD9D0EC
+	private void Awake() { }
+
+public class SceneUI : MonoBehaviour // TypeDefIndex: 8374
+{
+	// Fields
+	[SerializeField] // RVA: 0x6300A8 Offset: 0x6300A8 VA: 0x6300A8
+	[HeaderAttribute] // RVA: 0x6300A8 Offset: 0x6300A8 VA: 0x6300A8
+	private LevelScrollView levelScroll; // 0x18
+	[SerializeField] // RVA: 0x6300F4 Offset: 0x6300F4 VA: 0x6300F4
+	private WeaponUI weaponUI; // 0x20
+	[SerializeField] // RVA: 0x630104 Offset: 0x630104 VA: 0x630104
+	private Canvas mainCanvas; // 0x28
+	[HeaderAttribute] // RVA: 0x630114 Offset: 0x630114 VA: 0x630114
+	public Text playerNameTxt; // 0x30
+	[HeaderAttribute] // RVA: 0x63014C Offset: 0x63014C VA: 0x63014C
+	public GameObject funContainer; // 0x38
+	public GameObject levelContainer; // 0x40
+	public GameObject levelRoot; // 0x48
+	public PvPUI pvpUI; // 0x50
+	[HeaderAttribute] // RVA: 0x630184 Offset: 0x630184 VA: 0x630184
+	public Button goldAddBtn; // 0x58
+	public Button playerInfoBtn; // 0x60
+	public Button weaponBtn; // 0x68
+	public Button giftPackBtn; // 0x70
+	public Button starRewardBtn; // 0x78
+	public Button characterBtn; // 0x80
+	public Button startGameBtn; // 0x88
+	public Button backToCurrentBtn; // 0x90
+	[HeaderAttribute] // RVA: 0x6301BC Offset: 0x6301BC VA: 0x6301BC
+	public GameObject starRedDot; // 0x98
+	public GameObject characterRedDot; // 0xA0
+	public GameObject shopRedPoint; // 0xA8
+	[HeaderAttribute] // RVA: 0x6301F4 Offset: 0x6301F4 VA: 0x6301F4
+	public Image playerIcon; // 0xB0
+	public Image playerCountryIcon; // 0xB8
+	[HeaderAttribute] // RVA: 0x63022C Offset: 0x63022C VA: 0x63022C
+	public Button killModeBtn; // 0xC0
+	public Button towerModeBtn; // 0xC8
+	public Button pvpModeBtn; // 0xD0
+	public Button zombieModeBtn; // 0xD8
+	public Button meleeModeBtn; // 0xE0
+	public Button sniperModeBtn; // 0xE8
+	public Button eliminaModeBtn; // 0xF0
+	public Button personalModeBtn; // 0xF8
+	public Button blastingModeBtn; // 0x100
+	public List<SceneTapItemUI> sceneTapItemUIs; // 0x108
+	[HeaderAttribute] // RVA: 0x630264 Offset: 0x630264 VA: 0x630264
+	public TaskUITips taskUITips; // 0x110
+	public PlayerInfoUIControl playerInfoUIControl; // 0x118
+	public GoldRootUI goldRootUI; // 0x120
+	public TowerRootUI towerRootUI; // 0x128
+	public DynamicAlignmentUI modeTabDynamicAlignment; // 0x130
+	public UnityAction<LevelType, int, FactionType> onStartGame; // 0x138
+	private LevelType currentMode; // 0x140
+	private ClickState curClickState; // 0x144
+	private int currSelectLevel; // 0x148
+	private bool isFirstOpenUI; // 0x14C
+	private List<LevelScrollItemData> levelItems; // 0x150
+
+	// Methods
+
+	// RVA: 0xD9EEF0 Offset: 0xD9EEF0 VA: 0xD9EEF0
+	private void Awake() { }
+
+public class StoreRewardAdItem : MonoBehaviour // TypeDefIndex: 8380
+{
+	// Fields
+	public Button buyBtn; // 0x18
+	public Text title; // 0x20
+	public Text goldDesc; // 0x28
+	public Text adDesc; // 0x30
+	public Text count; // 0x38
+	public Image icon; // 0x40
+	public Image topBG; // 0x48
+	public GameObject goldState; // 0x50
+	public GameObject adState; // 0x58
+	public GameObject lockObj; // 0x60
+	public Sprite goldImg; // 0x68
+	public Sprite greenSprite; // 0x70
+	public Sprite blueSprite; // 0x78
+	private StoreRewardDefine def; // 0x80
+
+	// Methods
+
+	// RVA: 0xD59F94 Offset: 0xD59F94 VA: 0xD59F94
+	public void Init(StoreRewardDefine define) { }
+
+public class StoreUI : MonoBehaviour // TypeDefIndex: 8387
+{
+	// Fields
+	public StoreTapInfo rewardAd; // 0x18
+	public StoreTapInfo weaponGold; // 0x20
+	public StoreTapInfo weaponAd; // 0x28
+	public StoreTapInfo giftpack; // 0x30
+	public ScrollRect scroller; // 0x38
+	public Button closeBtn; // 0x40
+	public Text countDownTime; // 0x48
+	public StoreRewardAdArea storeRewardAdArea; // 0x50
+	[DisplayOnly] // RVA: 0x630494 Offset: 0x630494 VA: 0x630494
+	public float debugNormalizedPosition; // 0x58
+	private Coroutine nextRewardSecond; // 0x60
+	private WaitForSeconds nextRewardWait; // 0x68
+	private UnityAction onCloseEvt; // 0x70
+	public GoldRootUI goldRootUI; // 0x78
+
+	// Methods
+
+	// RVA: 0xD5A9E0 Offset: 0xD5A9E0 VA: 0xD5A9E0
+	private void Start() { }
+
+public class TaskUI : MonoBehaviour // TypeDefIndex: 8396
+{
+	// Fields
+	[HeaderAttribute] // RVA: 0x6304EC Offset: 0x6304EC VA: 0x6304EC
+	public Button closeBtn; // 0x18
+	[HeaderAttribute] // RVA: 0x630524 Offset: 0x630524 VA: 0x630524
+	[SerializeField] // RVA: 0x630524 Offset: 0x630524 VA: 0x630524
+	private Button dailyTaskBtn; // 0x20
+	[SerializeField] // RVA: 0x630570 Offset: 0x630570 VA: 0x630570
+	private Button weeklyTaskBtn; // 0x28
+	[SerializeField] // RVA: 0x630580 Offset: 0x630580 VA: 0x630580
+	private Button permanentTaskBtn; // 0x30
+	[SerializeField] // RVA: 0x630590 Offset: 0x630590 VA: 0x630590
+	private Text time; // 0x38
+	[SerializeField] // RVA: 0x6305A0 Offset: 0x6305A0 VA: 0x6305A0
+	[HeaderAttribute] // RVA: 0x6305A0 Offset: 0x6305A0 VA: 0x6305A0
+	private List<TaskTabUIItem> taskTabUIItems; // 0x40
+	[HeaderAttribute] // RVA: 0x6305EC Offset: 0x6305EC VA: 0x6305EC
+	[SerializeField] // RVA: 0x6305EC Offset: 0x6305EC VA: 0x6305EC
+	private GameObject timeRoot; // 0x48
+	[SerializeField] // RVA: 0x630638 Offset: 0x630638 VA: 0x630638
+	[HeaderAttribute] // RVA: 0x630638 Offset: 0x630638 VA: 0x630638
+	private TaskUIScrollView taskUIScrollView; // 0x50
+	public GoldRootUI goldRootUI; // 0x58
+	private Dictionary<TaskTimeEnum, List<TaskStateData>> totalTaskData; // 0x60
+	private TaskTimeEnum currentSelect; // 0x68
+	public UnityAction onClose; // 0x70
+	private GoodsType jumpType; // 0x78
+	private int jumpIndex; // 0x7C
+	private bool isInited; // 0x80
+
+	// Methods
+
+	// RVA: 0xD60F00 Offset: 0xD60F00 VA: 0xD60F00
+	private void Awake() { }
+
+internal class TaskUIItem : FancyScrollRectCell<TaskStateData, TaskUIContext> // TypeDefIndex: 8399
+{
+	// Fields
+	[SerializeField] // RVA: 0x630684 Offset: 0x630684 VA: 0x630684
+	[HeaderAttribute] // RVA: 0x630684 Offset: 0x630684 VA: 0x630684
+	private Text awardCount; // 0x28
+	[SerializeField] // RVA: 0x6306D0 Offset: 0x6306D0 VA: 0x6306D0
+	private Text taskDes; // 0x30
+	[SerializeField] // RVA: 0x6306E0 Offset: 0x6306E0 VA: 0x6306E0
+	private Text progressText; // 0x38
+	[HeaderAttribute] // RVA: 0x6306F0 Offset: 0x6306F0 VA: 0x6306F0
+	[SerializeField] // RVA: 0x6306F0 Offset: 0x6306F0 VA: 0x6306F0
+	private Image icon; // 0x40
+	[SerializeField] // RVA: 0x63073C Offset: 0x63073C VA: 0x63073C
+	private Image buttonImage; // 0x48
+	[SerializeField] // RVA: 0x63074C Offset: 0x63074C VA: 0x63074C
+	private Image frame; // 0x50
+	[SerializeField] // RVA: 0x63075C Offset: 0x63075C VA: 0x63075C
+	private Image mask; // 0x58
+	[SerializeField] // RVA: 0x63076C Offset: 0x63076C VA: 0x63076C
+	[HeaderAttribute] // RVA: 0x63076C Offset: 0x63076C VA: 0x63076C
+	private GameObject btnCanReceive; // 0x60
+	[SerializeField] // RVA: 0x6307B8 Offset: 0x6307B8 VA: 0x6307B8
+	private GameObject btnCantReceived; // 0x68
+	[SerializeField] // RVA: 0x6307C8 Offset: 0x6307C8 VA: 0x6307C8
+	private GameObject textReceived; // 0x70
+	[SerializeField] // RVA: 0x6307D8 Offset: 0x6307D8 VA: 0x6307D8
+	[HeaderAttribute] // RVA: 0x6307D8 Offset: 0x6307D8 VA: 0x6307D8
+	private Slider progress; // 0x78
+	[HeaderAttribute] // RVA: 0x630824 Offset: 0x630824 VA: 0x630824
+	[SerializeField] // RVA: 0x630824 Offset: 0x630824 VA: 0x630824
+	private Button receiveButton; // 0x80
+	[SerializeField] // RVA: 0x630870 Offset: 0x630870 VA: 0x630870
+	[HeaderAttribute] // RVA: 0x630870 Offset: 0x630870 VA: 0x630870
+	private Color nomarlColor; // 0x88
+	[SerializeField] // RVA: 0x6308BC Offset: 0x6308BC VA: 0x6308BC
+	private Color awardedColor; // 0x98
+	[SerializeField] // RVA: 0x6308CC Offset: 0x6308CC VA: 0x6308CC
+	private Color textSpecialColor; // 0xA8
+	[SerializeField] // RVA: 0x6308DC Offset: 0x6308DC VA: 0x6308DC
+	private Color weaponColor; // 0xB8
+	[SerializeField] // RVA: 0x6308EC Offset: 0x6308EC VA: 0x6308EC
+	private Color normalColor; // 0xC8
+	[SerializeField] // RVA: 0x6308FC Offset: 0x6308FC VA: 0x6308FC
+	private Color weaponCountColor; // 0xD8
+	[HeaderAttribute] // RVA: 0x63090C Offset: 0x63090C VA: 0x63090C
+	[SerializeField] // RVA: 0x63090C Offset: 0x63090C VA: 0x63090C
+	private Sprite goldSprite; // 0xE8
+	[SerializeField] // RVA: 0x630958 Offset: 0x630958 VA: 0x630958
+	private Sprite frameGray; // 0xF0
+	[SerializeField] // RVA: 0x630968 Offset: 0x630968 VA: 0x630968
+	private Sprite frameYellow; // 0xF8
+	[HeaderAttribute] // RVA: 0x630978 Offset: 0x630978 VA: 0x630978
+	[SerializeField] // RVA: 0x630978 Offset: 0x630978 VA: 0x630978
+	private RectTransform rectTransform; // 0x100
+	[SerializeField] // RVA: 0x6309C4 Offset: 0x6309C4 VA: 0x6309C4
+	private RectTransform iconRectTransform; // 0x108
+	private float progressFactor; // 0x110
+	private bool isSelect; // 0x114
+	private TaskStateData currData; // 0x118
+	private TaskDefine taskDefine; // 0x120
+
+	// Methods
+
+	// RVA: 0xD61F68 Offset: 0xD61F68 VA: 0xD61F68 Slot: 6
+	public override void Initialize() { }
+
+public class WeaponUI : MonoBehaviour // TypeDefIndex: 8425
+{
+	// Fields
+	[SerializeField] // RVA: 0x630EE8 Offset: 0x630EE8 VA: 0x630EE8
+	[HeaderAttribute] // RVA: 0x630EE8 Offset: 0x630EE8 VA: 0x630EE8
+	private WeaponScrollView weaponScroll; // 0x18
+	[HeaderAttribute] // RVA: 0x630F34 Offset: 0x630F34 VA: 0x630F34
+	public Button adTryBtn; // 0x20
+	public Button equipedBtn; // 0x28
+	public Button equipBtn; // 0x30
+	public Button backBtn; // 0x38
+	[HeaderAttribute] // RVA: 0x630F6C Offset: 0x630F6C VA: 0x630F6C
+	public Button goldUnlockWeapon; // 0x40
+	public Button SignInGetWeapon; // 0x48
+	public Button AdGetWeapon; // 0x50
+	public Button StarGetWeapon; // 0x58
+	public Button GiftGetWeapon; // 0x60
+	public Button TaskGetWeapon; // 0x68
+	public Button UpgradeWeaponBtn; // 0x70
+	public Button adPropBtn; // 0x78
+	[HeaderAttribute] // RVA: 0x630FA4 Offset: 0x630FA4 VA: 0x630FA4
+	public Button mainSlotBtn; // 0x80
+	public Button secSlotBtn; // 0x88
+	public Button handgunBtn; // 0x90
+	public Button specialBtn; // 0x98
+	public Button meleeBtn; // 0xA0
+	public Button propBtn; // 0xA8
+	public WeaponTabItemUI mainTab; // 0xB0
+	public WeaponTabItemUI secTab; // 0xB8
+	public WeaponTabItemUI handgunTab; // 0xC0
+	public WeaponTabItemUI zombieTab; // 0xC8
+	public WeaponTabItemUI meleeTab; // 0xD0
+	public WeaponTabItemUI propTab; // 0xD8
+	[HeaderAttribute] // RVA: 0x630FDC Offset: 0x630FDC VA: 0x630FDC
+	public Text goldUnlockTxt; // 0xE0
+	public Text equip; // 0xE8
+	public Text equiped; // 0xF0
+	public Text tryOnce; // 0xF8
+	public Text upgradeGold; // 0x100
+	public Text title; // 0x108
+	public Text propNum; // 0x110
+	public Text propDes; // 0x118
+	public Text propTryOnce; // 0x120
+	[HeaderAttribute] // RVA: 0x631014 Offset: 0x631014 VA: 0x631014
+	public GameObject propertyRoot; // 0x128
+	public ProtertyItemUI damageCell; // 0x130
+	public ProtertyItemUI weightCell; // 0x138
+	public ProtertyItemUI ammoCell; // 0x140
+	public ProtertyItemUI fireRateCell; // 0x148
+	[HeaderAttribute] // RVA: 0x63104C Offset: 0x63104C VA: 0x63104C
+	public Image upgradeImage; // 0x150
+	[HeaderAttribute] // RVA: 0x631084 Offset: 0x631084 VA: 0x631084
+	public Sprite yellowSprite; // 0x158
+	public Sprite graySprite; // 0x160
+	[HeaderAttribute] // RVA: 0x6310BC Offset: 0x6310BC VA: 0x6310BC
+	public WeaponLevelInfo weaponLevelInfo; // 0x168
+	public UnityAction onClose; // 0x170
+	private FPSWeaponEquipState currentSlotState; // 0x178
+	private List<WeaponScrollItemData> mainWeaponDatas; // 0x180
+	private List<WeaponScrollItemData> secWeapoonDatas; // 0x188
+	private List<WeaponScrollItemData> handgunWeaponDatas; // 0x190
+	private List<WeaponScrollItemData> zombieWeaponDatas; // 0x198
+	private List<WeaponScrollItemData> meleeWeaponDatas; // 0x1A0
+	private List<WeaponScrollItemData> propDatas; // 0x1A8
+	private WeaponScrollItemData currentData; // 0x1B0
+	private LevelType currentSelectMode; // 0x1B8
+	private int currentSelectLevel; // 0x1BC
+
+	// Methods
+
+	// RVA: 0xE7149C Offset: 0xE7149C VA: 0xE7149C
+	private void Awake() { }
+
